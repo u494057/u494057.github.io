@@ -1,0 +1,75 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+body {
+  padding-top: 50px;
+	background-image: url("imgtest.jpg");
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 500px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+/*
+ * Clases creadas para la practica
+ */
+.container-pre {
+  width: 100%;
+}
+
+.separator {
+	padding-top: 25px;
+}
+
+.horizontal-l{
+	width: 50%;
+	text-align: left;
+	float: left;
+}
+
+.fecha-prox1{
+	color: green;
+}
+
+.fecha-prox2{
+	color: lightgreen;
+}
+
+.mas-pop{
+	color: red;
+}
+
+.top-rec{
+	color: orange;
+}
+
+.carrusel{
+	padding: 20px;
+}
+
+.tabcontent1, .tabcontent2 {
+  display: none;
+}
+
+.buscador{
+	background-color: #e9ecef;
+	padding: 25px;
+	margin-bottom: 10px;
+}
+
+.footer-style {
+	background-color: yellow;
+}
+
