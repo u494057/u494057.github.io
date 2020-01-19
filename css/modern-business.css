@@ -25,10 +25,6 @@ body {
 /*
  * Clases creadas para la practica
  */
-.container-pre {
-  width: 100%;
-}
-
 .separator {
 	padding-top: 25px;
 }
@@ -53,10 +49,6 @@ body {
 
 .top-rec{
 	color: orange;
-}
-
-.carrusel{
-	padding: 20px;
 }
 
 .tabcontent1, .tabcontent2 {
