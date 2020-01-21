@@ -65,3 +65,17 @@ body {
 	background-color: yellow;
 }
 
+.textinput {
+		float: left;
+		width: 100%;
+		min-height: 75px;
+		outline: none;
+		resize: none;
+		border: 1px solid grey;
+}
+
+.comentarios {
+  height: 800px;
+  overflow: scroll;
+}
+
