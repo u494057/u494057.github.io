@@ -3,12 +3,7 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Modern Business - Start Bootstrap Template</title>
+  <title>VVF - Cine y Cultura	Novedades(index), Buscar, MisPeliculas, Pelicula-Ficha, Pelicula-Social(analisis y comentarios), Fichas-Sociales(comparacion en detalle de los stats) y Perfil</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -16,11 +11,23 @@
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
 
+  <meta charset="UTF-8">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+
 </head>
 
 <body>
 
   <!-- Navigation -->
+
   <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Veni Vidi Filmchi</a>
@@ -49,122 +56,18 @@
     </div>
   </nav>
 
-  <!-- Page Content -->
+  <br>
   <div class="container">
-
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Perfil</h1>
-
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="perfil.html">Usuario</a>
-      </li>
-      <li class="breadcrumb-item active">Perfil</li>
-    </ol>
-
-    <div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
-      <div class="card">
-        <div class="card-header" role="tab" id="headingOne">
-          <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Opciones de Cuenta</a>
-          </h5>
-        </div>
-
-        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-          <div class="card-body">
-						<b>ID:</b> A2A2<br>	
-						<input type="text" name="firstname">
-						<br>
-						<b>Nombre:</b> Manolo<br>
-						<input type="text" name="firstname">
-						<br>
-						<b>Apellidos:</b> Cabrera Urcén<br>
-						<input type="text" name="lastname">
-						<br>
-						<b>Correo Asociado:</b> ManoloCU@tumail.com<br>
-						<input type="text" name="firstname">
-						<br>
-						<b>Contraseña:</b> ********<br>
-						<input type="text" name="firstname">
-						<br>
-						<b>Teléfono:</b> 696 96 969 699<br>
-						<input type="text" name="firstname">
-						<br><br>
-						<input type="submit" value="Enviar">
-          </div>
-        </div>
-      </div>
-			
-			<br>
-			
-      <div class="card">
-        <div class="card-header" role="tab" id="headingTwo">
-          <h5 class="mb-0">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Opciones de Perfil
-            </a>
-          </h5>
-        </div>
-        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div class="card-body">
-						<b>Firma de Perfil:</b> Un dia, una noche<br>	
-						<input type="text" name="firstname">
-						<br>
-						<b>Saga Favorita:</b> El planeta de los simios<br>
-						<input type="text" name="firstname">
-						<br>
-						<b>Película Favorita:</b> La luz y el sueño<br>
-						<input type="text" name="lastname">
-						<br>
-						<b>Género Favorito:</b> Tragicomedia Biográfica<br>
-						<input type="text" name="firstname">
-						<br>
-						<b>Actor Favorito:</b> Iñigo Montés<br>
-						<input type="text" name="firstname">
-						<br>
-						<b>Director Favorito:</b> Emanuel Dellington<br>
-						<input type="text" name="firstname">
-						<br><br>
-						<input type="submit" value="Enviar">
-					</div>
-        </div>
-      </div>
-			
-			<br>
-			
-      <div class="card">
-        <div class="card-header" role="tab" id="headingThree">
-          <h5 class="mb-0">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Opciones de Privacidad</a>
-          </h5>
-        </div>
-        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-          <div class="card-body">
-						<input type="checkbox" name="priv" value="p1"> Otros usuarios pueden consultar mi correo electrónico<br>
-						<input type="checkbox" name="priv" value="p2"> Otros usuarios pueden enviarme mensajes de texto privados<br>
-						<input type="checkbox" name="priv" value="p3"> La página personalizará los anuncios dependiendo de sus datos<br><br>
-						<input type="submit" value="Enviar">
-					</div>
-        </div>
-      </div>
+    <div id="crear-login" class="buscador">
     </div>
-
   </div>
-  <!-- /.container -->
 
-	<br><br><br><br><br><br>
-	
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+  <div id="contenido" class="container">
+    
+  </div>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="app.js"></script>
+  <script>cambiopantalla();</script>
 </body>
 
 </html>
