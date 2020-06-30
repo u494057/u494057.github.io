@@ -16,10 +16,17 @@
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
 
+  <meta charset="UTF-8">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+
 </head>
 
 <body>
-
   <!-- Navigation -->
 		<nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -49,6 +56,7 @@
     </div>
   </nav>
 
+
   <!-- Page Content -->
   <div class="container">
 
@@ -75,31 +83,9 @@
 				<div class="card h-100">
 					<div class="comentarios">
 						<h4 class="card-header">Comentarios</h4>
-						
-						<div class="card-body">
-							<h4 class="card-header comen1">AntonioXZ</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.
-						</div>
-						
-						<div class="card-body">
-							<h4 class="card-header comen2">MariaDB</h4>
-							At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
-						</div>
-						
-						<div class="card-body">
-							<h4 class="card-header comen1">Nachos_de_queso</h4>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-						</div>
-						
-						<div class="card-body">
-							<h4 class="card-header comen2">TheOtherRock</h4>
-							Integer eget aliquet nibh praesent tristique magna sit amet purus. Mi sit amet mauris commodo quis. Nec dui nunc mattis enim. Id neque aliquam vestibulum morbi. Volutpat ac tincidunt vitae semper. Sagittis orci a scelerisque purus semper eget duis at. Leo duis ut diam quam nulla porttitor. Congue eu consequat ac felis donec et odio. Massa placerat duis ultricies lacus sed. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. At in tellus integer feugiat scelerisque varius morbi enim nunc. Dignissim sodales ut eu sem integer vitae justo eget magna. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Sit amet nisl suscipit adipiscing bibendum est. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Aliquam sem fringilla ut morbi tincidunt augue interdum.
-						</div>
-						
-						<div class="card-body">
-							<h4 class="card-header comen1">ObejaComeApuntes</h4>
-							Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Sodales neque sodales ut etiam sit amet nisl. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Senectus et netus et malesuada fames ac. Dolor sit amet consectetur adipiscing elit ut. Magna ac placerat vestibulum lectus mauris ultrices eros. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Neque ornare aenean euismod elementum nisi. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim.					
-						</div>
+						<div id="comentarios">
+              
+            </div>
 					</div>
 				</div>
 			</div>
@@ -108,13 +94,15 @@
 				
 		<div class="row">
 			<div class="col-lg-10">
-				<textarea class="textinput"></textarea>
+				<textarea id="textarea" class="textinput"></textarea>
 			</div>
 			<div class="col-lg-2">
-				<a href="#" class="btn btn-primary">Añadir Comentario</a>
+				<input type="button" onclick="addComment();" id="addComentario" value="Añadir Comentario">
 			</div>
 		</div>	
-		
+    
+
+
 		<br>
 
 
@@ -137,6 +125,7 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="db.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
