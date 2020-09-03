@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <head>
 
   <meta charset="utf-8">
@@ -16,17 +18,15 @@
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
 
-  <meta charset="UTF-8">
-
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
 
-
 </head>
 
 <body>
+
   <!-- Navigation -->
 		<nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -56,59 +56,26 @@
     </div>
   </nav>
 
-
   <!-- Page Content -->
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3" id="titulo"></h1>
+    <h1 class="mt-4 mb-3">Peliculas
+    </h1>
 
     <ol class="breadcrumb">
-      <li class="breadcrumb-item active" id="subtitulo"></li>
-			<li class="breadcrumb-item">
-        <a href="fichatecnica.html">Ficha Técnica</a>
-      </li>
-			<li class="breadcrumb-item">
-        <a href="analisis.html">Análisis</a>
-      </li>
-			<li class="breadcrumb-item">
-        <a href="comentarios.html"><b>Comentarios</b></a>
-      </li>
+      <li class="breadcrumb-item active">Listado</li> <br>
+       
     </ol>
-		
-    <div class="row">
-			<div class="col-lg-12 mb-1">
-				<div class="card h-100">
-					<div class="comentarios">
-						<h4 class="card-header">Comentarios</h4>
-						<div id="comentarios">
-              
-            </div>
-					</div>
-				</div>
-			</div>
-		</div>
-				
-				
-		<div class="row">
-			<div class="col-lg-10">
-				<textarea id="textarea" class="textinput"></textarea>
-			</div>
-			<div class="col-lg-2">
-				<input type="button" onclick="addComment();" id="addComentario" value="Añadir Comentario">
-			</div>
-		</div>	
     
+    <div id="peliculas">
 
+    </div>
 
-		<br>
-
-
-    <!-- Intro Content -->
 
   </div>
-  <!-- /.container -->
-
+    
+    <br><br>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
@@ -123,10 +90,11 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="comentarios_db.js"></script>
+  <script src="peliculas_db.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 
 </html>

@@ -11,13 +11,18 @@ img {
 
 <head>
 
-  <title>VVF - Cine y Cultura	Novedades(index), Buscar, MisPeliculas, Pelicula-Ficha, Pelicula-Social(analisis y comentarios), Fichas-Sociales(comparacion en detalle de los stats) y Perfil</title>
+  <title>VVF - Cine y Cultura </title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
 
 </head>
 
@@ -43,7 +48,7 @@ img {
             <a class="nav-link" href="buscar.html">Buscar</a>
           </li>        
 					<li class="nav-item">
-            <a class="nav-link" href="fichatecnica.html">Películas</a>
+            <a class="nav-link" href="peliculas.html">Películas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="perfil.html">Perfil</a>
@@ -68,15 +73,13 @@ img {
           <div class="card-body">
 						<div class="horizontal-l">
 							<h5 class="mas-pop">
-								Mejor Valoradas
+								Mayores Producciones
 							</h5>
 							<hr>
 							<p>
-							<a class="tablinks" onmouseover="openImage(event, 'b1','tabcontent1')" href="fichatecnica.html">Remember Me</a>	<br/>
-							<a class="tablinks" onmouseover="openImage(event, 'b2','tabcontent1')" href="fichatecnica.html">Fast & Furious: Hobbs & Shaw</a>  <br/>
-							<a href="fichatecnica.html">El canto de la selva </a>  <br/>
-							<a href="fichatecnica.html">Cantando bajo la lluvia</a>  <br/>
-							<a href="fichatecnica.html">Padre no hay más que uno</a>	<br/>
+              <div id="mejor_valoradas">
+              
+              </div>
 							</p>
 						</div>
 						<div class="horizontal-l">
@@ -85,11 +88,9 @@ img {
 							</h5>
 							<hr>
 							<p>
-							<a class="tablinks" onmouseover="openImage(event, 'b3','tabcontent1')" href="fichatecnica.html">Fast & Furious: Hobbs & Shaw</a>	<br/>
-							<a class="tablinks" onmouseover="openImage(event, 'b4','tabcontent1')" href="fichatecnica.html">Padre no hay más que uno</a>  <br/>
-							<a href="fichatecnica.html">Remember Me</a> <br/>
-							<a href="fichatecnica.html">El gran Buster</a>  <br/>
-							<a href="fichatecnica.html">El canto de la selva</a>	</br>
+              <div id="top_recaudaciones">
+                
+              </div>
 							</p>
 						</div>
           </div>
@@ -261,7 +262,8 @@ function openImage(evt, imgName, tabcontentName) {
 }
 
 </script>	
-	
+
+<script src="index_db.js"></script>
 	
 </body>
 

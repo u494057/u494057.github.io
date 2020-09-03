@@ -17,7 +17,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
-  
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
@@ -27,41 +27,36 @@
 
 <body>
 
-  <!-- Navigation -->
-		<nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Veni Vidi Filmchi</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Novedades</a>
-          </li>
-					<li class="nav-item">
-            <a class="nav-link" href="estadisticas.html">Estadísticas</a>	
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="buscar.html">Buscar</a>
-          </li>        
-					<li class="nav-item">
-            <a class="nav-link" href="peliculas.html">Películas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="perfil.html">Perfil</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   <!-- Page Content -->
-  <div id="main" class="container">
+  <div class="container">
 
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Añadir Peliculas</h1>
+    <div id="main">
+      <input id="original_title" placeholder="título"><br><p></p>
+      <input id="director" placeholder="director"><br><p></p>
+      <input id="producer" placeholder="productor"><br><p></p>
+      <input id="writter" placeholder="escritor"><br><p></p>
+      <input id="actor1" placeholder="actor"><br><p></p>
+      <input id="actor2" placeholder="actor"><br><p></p>
+      <input id="actor3" placeholder="actor"><br><p></p>
+      <input id="actor4" placeholder="actor"><br><p></p>
+      <input id="actor5" placeholder="actor"><br><p></p>
+      <input id="budget" type="number" placeholder="presupuesto"><br><p></p>
+      <input id="box_office" type="number" placeholder="ganancias"><br><p></p>
+      <input id="debut" type="date" placeholder="fecha de estreno"><br><p></p>
+      <input id="duration" type="number" placeholder="duración"><br><p></p>
+      <input id="genres1" placeholder="género"><br><p></p>
+      <input id="genres2" placeholder="género"><br><p></p>
+      <input id="genres3" placeholder="género"><br><p></p>
+      <input id="genres4" placeholder="género"><br><p></p>
+      <input id="sinopsis" placeholder="sinopsis"><br><p></p>
+      <input type="button" onclick="addFilm();" id="filmButton" value="Añadir Película">
+      
+    </div>
   </div>
-  <!-- /.container -->
-	
+    
+    <br><br>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
@@ -76,7 +71,7 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="fichatecnica_db.js"></script>
+  <script src="admin_db.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

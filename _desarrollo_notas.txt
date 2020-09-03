@@ -1,0 +1,56 @@
+---
+Crear bd firebase
+Pantalla de registro y login
+Funcionalidad de registro y login
+
+--
+Cargar datos de la bd, en este caso comentarios
+
+--
+Comporbar y mantener sesion de usuario
+Añadir comentarios si se esta conectado
+
+--
+Crear y cargar lista de peliculas
+.Añadir peliculas desde un panel de admin (sobre todo para facilitar su inclusion, desde el panel de firebase es mas tosco para documentos no simples)
+*Falta asociar a una pelicula imagenes
+
+--
+Clicar en una pelicula y cargar su ficha tecnica correspondiente dinamicamente
+.Cargar ficha tecnica dependiendo de un dato de sesion
+.Pasar el dato de sesion de una pantalla a otra => SIN COMPLETAR
+
+--
+Pasar el dato de sesion de una pantalla a otra
+.Se necesita que al crear los html dinamicamente se definan (estos nuevos elementos) por js y no directamente por html
+
+--
+Uso de imagenes
+.Adición de imagen_main y images como campos de peliculas en la bd
+
+--
+Reestructuracion del proyecto
+.Retocar la pagina principal para que carge de manera dinamica
+.Reorganizacion de partes del codigo
+
+--
+Comentarios dinamicos
+.Asociar comentarios a peliculas
+.Peliculas con un array de referencias a comentarios
+
+
+Por Hacer
+.A medias
+-Retocar la pagina principal para que carge de manera dinamica
+-Uso de imagenes - galeria
+-Usar una imagen default - sin imagen - para la imagen principal de las peliculas
+-Transpasar "peliculas" a "buscar"
+
+
+Dudas y mejoras
+.Para guardar la informacion guardar el nombre en vez del id de la pelicula
+.Guardar mas informacion en la sesion, como el nombre de la pelicula activa, para evitar consultas inecesarias
+
+
+
+

@@ -16,6 +16,11 @@
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
 </head>
 
 <body>
@@ -39,7 +44,7 @@
             <a class="nav-link" href="buscar.html">Buscar</a>
           </li>        
 					<li class="nav-item">
-            <a class="nav-link" href="fichatecnica.html">Películas</a>
+            <a class="nav-link" href="peliculas.html">Películas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="perfil.html">Perfil</a>
@@ -129,17 +134,17 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script>
-	
-	function mostrar() {
-		var x = document.getElementById("resultados");
-		var y = document.getElementById("space");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-			y.style.display = "none";
+		function mostrar(){
+			var x = document.getElementById("resultados");
+			var y = document.getElementById("space");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				y.style.display = "none";
+			}	
 		}
-	}
-	
 	</script>
+
+	<!-- <script src="buscar_db.js"></script> -->
 
 </body>
 

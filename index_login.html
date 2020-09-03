@@ -14,17 +14,31 @@
   <meta charset="UTF-8">
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
-
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+  
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
 
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBaNPkOlpvO96SdJa5NU6zA7OzKQqK-_m8",
+      authDomain: "iweb-fcd20.firebaseapp.com",
+      databaseURL: "https://iweb-fcd20.firebaseio.com",
+      projectId: "iweb-fcd20",
+      storageBucket: "iweb-fcd20.appspot.com",
+      messagingSenderId: "368681543245",
+      appId: "1:368681543245:web:842e09c367ae756b1ede04"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
 </head>
 
-<body>
+<body onload="hideNavbar()">
 
   <!-- Navigation -->
 
@@ -56,18 +70,30 @@
     </div>
   </nav>
 
-  <br>
-  <div class="container">
-    <div id="crear-login" class="buscador">
+  <div id="main-title" class="container">
+
+		<h1 class="mt-4 mb-3">Crear Cuenta</h1>
+
+    <h2>Registrar</h2>
+    <input id="email" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Contraseña">
+    <button onclick="registrar()">Enviar</button>
+    
+    <h2>Acceder</h2>
+    <input id="emailA" type="email" placeholder="Email">
+    <input id="passwordA" type="password" placeholder="Contraseña">
+    <button onclick="acceder()">Acceder</button>
+
+
+    <div id="contenido">
+
     </div>
+
   </div>
 
-  <div id="contenido" class="container">
-    
-  </div>
+
 
   <script src="app.js"></script>
-  <script>cambiopantalla();</script>
 </body>
 
 </html>
