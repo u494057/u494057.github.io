@@ -153,23 +153,6 @@ function loadHTML(){
     `;
 
 }
-
-function observer(){
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          // User is signed in.
-          console.log("Existe usuario activo");
-          // ...
-        } else {
-          // User is signed out.
-          displayName = "";
-          console.log("No existe usuario activo");
-          // ...
-        }
-      });
-}
-
-observer();
 loadDB();
 
 

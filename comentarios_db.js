@@ -3,8 +3,6 @@ var db = firebase.firestore();
 var addComentarioButton = document.getElementById('addComentario');
 var displayName = "";
 
-addComentarioButton.disabled = false;
-
 function addComment(){
     var com_id;
     db.collection("comments").add({
@@ -60,8 +58,19 @@ function loadDB() {
     .catch(function(error) {
         console.log("Error getting documents: ", error);
     });
+
+    verificarUsuario();
 }
 
+function verificarUsuario(){
+    firebase.auth().onAuthStateChanged(function(user) {
+        if(user){
+            addComentarioButton.disabled = false;
+        }else{
+            addComentarioButton.disabled = true; 
+        }
+    })
+}
 
 function loadComment(id){
     console.log(id);
@@ -79,7 +88,6 @@ function loadComment(id){
     });
 }
 loadDB();
-
 
 
 

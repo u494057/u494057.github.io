@@ -55,7 +55,11 @@ Actualización del panel de administración
 .Se ha añadido la posibilidad de inserción de imagenes al storage desde el navegador
 
 
-
+--
+Debug de la página comentarios
+.Añadido comprobación propia para habilitar el botón de añadir imagenes (borrado anteriormente)
+.Ahora si cierras sesión se recarga la página actual
+.Otros debugs
 
 
 

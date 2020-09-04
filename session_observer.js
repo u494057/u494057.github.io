@@ -14,6 +14,7 @@ function cerrarsesion(){
     .catch(function(error){
         console.log(error);
     })
+    location.reload();
 }
 
 //Observer para ver cambios en la sesión
