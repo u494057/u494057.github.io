@@ -26,38 +26,10 @@ img {
 
 </head>
 
-<body onload="hideNavbar()">
+<body>
 
   <!-- Navigation -->
-
-  <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Veni Vidi Filmchi</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Novedades</a>
-          </li>
-					<li class="nav-item">
-            <a class="nav-link" href="estadisticas.html">Estadísticas</a>	
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="buscar.html">Buscar</a>
-          </li>        
-					<li class="nav-item">
-            <a class="nav-link" href="peliculas.html">Películas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="perfil.html">Perfil</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <div id="navbar_main"></div>
 	
   <!-- Page Content -->
 
@@ -102,11 +74,8 @@ img {
       <div class="col-lg-6 mb-4">
         <div class="card h-100">
           <h4 class="card-header"></br></h4>
-          <div class="card-body">
-						<a id="b1" class="tabcontent1"><img src="images/remenberme.jpg"></a>
-						<a id="b2" class="tabcontent1"><img src="images/ffhas2.jpg"></a>
-						<a id="b3" class="tabcontent1"><img src="images/ffhas.jpg"></a>
-						<a id="b4" class="tabcontent1"><img src="images/padrenohay.jpg"></a>
+          <div class="card-body" id="image_top">
+
           </div>
           <div class="card-footer">
           </div>
@@ -119,47 +88,41 @@ img {
     <div class="row">
       <div class="col-lg-6 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Proximos Estrenos</h4>
+          <h4 class="card-header">Próximos Estrenos</h4>
           <div class="card-body">
 						<div class="horizontal-l">
-							<h5 class="fecha-prox2">
-							30 Agosto 2019
+							<h5 class="fecha-prox1">
+								Este Mes
 							</h5>
-							<p>
 							<hr>
-							<a class="tablinks" onmouseover="openImage(event, 'c1', 'tabcontent2')" href="fichatecnica.html">Dora y la Ciudad Perdida</a>  <br/>
-							<a class="tablinks" onmouseover="openImage(event, 'c2','tabcontent2')" href="fichatecnica.html">Objetivo: Washington D.C.</a>  <br/>
-							<a href="fichatecnica.html">Playmobil: La película</a>  <br/>
-							<a href="fichatecnica.html">La noche de las dos lunas</a>  <br/>
-							<a href="fichatecnica.html">El hotel a orillas del río</a>	<br/>
+							<p>
+              <div id="new_1">
+              
+              </div>
 							</p>
 						</div>
 						<div class="horizontal-l">
-							<h5 class="fecha-prox1">
-							23 Agosto 2019
+							<h5 class="fecha-prox2">
+								Este Año
 							</h5>
-							<p>
 							<hr>
-							<a class="tablinks" onmouseover="openImage(event, 'c3','tabcontent2')" href="fichatecnica.html">Angry Birds 2: La película</a>	<br/>
-							<a class="tablinks" onmouseover="openImage(event, 'c4','tabcontent2')" href="fichatecnica.html">Chicos buenos</a>  <br/>
-							<a href="fichatecnica.html">Stuber Express</a> <br/>
-							<a href="fichatecnica.html">Una íntima conviccion</a>  <br/>
-							<a href="fichatecnica.html">Este niño necesita aire fresco</a>	</br>
+							<p>
+              <div id="new_2">
+                
+              </div>
 							</p>
 						</div>
           </div>
-          <div class="card-footer">
+					<div class="card-footer">
+					
           </div>
         </div>
       </div>
       <div class="col-lg-6 mb-4">
         <div class="card h-100">
           <h4 class="card-header"></br></h4>
-          <div class="card-body">
-						<a id="c1" class="tabcontent2"><img src="images/dora.jpg"></a>
-						<a id="c2" class="tabcontent2"><img src="images/objetivowas.jpg"></a>
-						<a id="c3" class="tabcontent2"><img src="images/angrybirds2.jpg"></a>
-						<a id="c4" class="tabcontent2"><img src="images/chicosbuenos.jpg"></a>
+          <div class="card-body" id="image_bot">
+
           </div>
           <div class="card-footer">
           </div>
@@ -167,66 +130,10 @@ img {
       </div>
     </div>
     <!-- /.row -->
-		
-		
-		
-		</div></div>
-		
-		<div class="separator"></div>
-		<div class="container">
-
-    <!-- Portfolio Section -->
-    <div class="row">
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <div class="card-body">
-            <h4 style="text-align: center;"  class="card-title">
-              <a href="fichatecnica.html">Top Popularidad</a>
-            </h4>
-						<h6 style="text-align: center";> Fast & Furious: Hobbs & Shaw</h6>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
-          </div>
-					<div style="text-align: center;" class="card-footer">
-						<a href="fichatecnica.html" class="btn btn-primary">Ficha</a>
-						<a href="analisis.html" class="btn btn-primary">Análisis</a>
-						<a href="comentarios.html" class="btn btn-primary">Comentarios</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <div class="card-body">
-            <h4 style="text-align: center;" class="card-title">
-              <a href="fichatecnica.html">Top Recaudación</a>
-            </h4>
-						<h6 style="text-align: center";> Fast & Furious: Hobbs & Shaw</h6>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-					<div style="text-align: center;" class="card-footer">
-						<a href="fichatecnica.html" class="btn btn-primary">Ficha</a>
-						<a href="analisis.html" class="btn btn-primary">Análisis</a>
-						<a href="comentarios.html" class="btn btn-primary">Comentarios</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <div class="card-body">
-            <h4 style="text-align: center;" class="card-title">
-              <a href="fichatecnica.html">Top Votaciones</a>
-            </h4>
-						<h6 style="text-align: center";> Remember Me</h6>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-          </div>
-					<div style="text-align: center;" class="card-footer">
-						<a href="fichatecnica.html" class="btn btn-primary">Ficha</a>
-						<a href="analisis.html" class="btn btn-primary">Análisis</a>
-						<a href="comentarios.html" class="btn btn-primary">Comentarios</a>
-          </div>				
-        </div>
-      </div>
-    </div>
   </div>
+</div>
+		
+	
 
 
   <!-- Footer -->
@@ -241,29 +148,11 @@ img {
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	
-	
-<script>
-function hideNavbar() {
-	//document.getElementById("navbar").style.display = "none";
-}
-
-function openImage(evt, imgName, tabcontentName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName(tabcontentName);
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(imgName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-</script>	
-
-<script src="index_db.js"></script>
+  <!-- Other JavaScripts -->
+  <script src="navbar.js"></script>
+  <script src="firebase_init.js"></script>
+  <script src="index_db.js"></script>
+  <script src="session_observer.js"></script>
 	
 </body>
 

@@ -22,41 +22,40 @@
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-storage.js"></script>
 
 </head>
 
 <body>
 
   <!-- Page Content -->
-  <div class="container">
+  <div id="all" class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Añadir Peliculas</h1>
-    <div id="main">
-      <input id="original_title" placeholder="título"><br><p></p>
-      <input id="director" placeholder="director"><br><p></p>
-      <input id="producer" placeholder="productor"><br><p></p>
-      <input id="writter" placeholder="escritor"><br><p></p>
-      <input id="actor1" placeholder="actor"><br><p></p>
-      <input id="actor2" placeholder="actor"><br><p></p>
-      <input id="actor3" placeholder="actor"><br><p></p>
-      <input id="actor4" placeholder="actor"><br><p></p>
-      <input id="actor5" placeholder="actor"><br><p></p>
-      <input id="budget" type="number" placeholder="presupuesto"><br><p></p>
-      <input id="box_office" type="number" placeholder="ganancias"><br><p></p>
-      <input id="debut" type="date" placeholder="fecha de estreno"><br><p></p>
-      <input id="duration" type="number" placeholder="duración"><br><p></p>
-      <input id="genres1" placeholder="género"><br><p></p>
-      <input id="genres2" placeholder="género"><br><p></p>
-      <input id="genres3" placeholder="género"><br><p></p>
-      <input id="genres4" placeholder="género"><br><p></p>
-      <input id="sinopsis" placeholder="sinopsis"><br><p></p>
-      <input type="button" onclick="addFilm();" id="filmButton" value="Añadir Película">
-      
+    <h1 class="mt-4 mb-3">Panel de Administración</h1>
+
+    <div class="row">
+      &emsp;<h4 class="mt-4 mb-3">
+          <a  
+          style="color:black;" 
+          onclick="cambiopantalla('add_film')" 
+          href="#"
+          >Añadir Película</a> | 
+
+          <a  
+          style="color:black;" 
+          onclick="cambiopantalla('add_film')" 
+          href="#"
+          >Actualizar Portada</a> | 
+          
+      </h4>
     </div>
+    
+    <div id="main"></div>
+
   </div>
     
-    <br><br>
+  <br><br>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">

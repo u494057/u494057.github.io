@@ -38,17 +38,37 @@ Comentarios dinamicos
 .Asociar comentarios a peliculas
 .Peliculas con un array de referencias a comentarios
 
+--
+Mejora del index 
+.Carga de imagen en el evento onmouseover
+.Cambios menores
 
+--
+Reetructuración de código para mayor modularidad
+.Carga del navbar
+.Carga de fb
+.Detección de la session reflejada en el navbar
+
+--
+Actualización del panel de administración
+.Diferentes paneles para crear y actualizar
+.Se ha añadido la posibilidad de inserción de imagenes al storage desde el navegador
+
+
+
+
+
+
+++
 Por Hacer
 .A medias
--Retocar la pagina principal para que carge de manera dinamica
 -Uso de imagenes - galeria
 -Usar una imagen default - sin imagen - para la imagen principal de las peliculas
 -Transpasar "peliculas" a "buscar"
 
 
 Dudas y mejoras
-.Para guardar la informacion guardar el nombre en vez del id de la pelicula
+.Para guardar la informacion guardar el nombre en vez del id de la pelicula, e incluso mejor si se pasa el id a traves del link
 .Guardar mas informacion en la sesion, como el nombre de la pelicula activa, para evitar consultas inecesarias
 
 

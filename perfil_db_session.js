@@ -1,16 +1,4 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyBaNPkOlpvO96SdJa5NU6zA7OzKQqK-_m8",
-    authDomain: "iweb-fcd20.firebaseapp.com",
-    databaseURL: "https://iweb-fcd20.firebaseio.com",
-    projectId: "iweb-fcd20",
-    storageBucket: "iweb-fcd20.appspot.com",
-    messagingSenderId: "368681543245",
-    appId: "1:368681543245:web:842e09c367ae756b1ede04"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
+var displayName;
 
 function registrar(){
 
@@ -37,7 +25,8 @@ function registrar(){
             var errorMessage = error.message;
             console.log(errorCode + " - " + errorMessage);
             window.alert("El correo introducido no es correcto");
-        }) 
+        })
+        window.location.href = 'index.html';
     }
     else{
         console.log("Registro erroneo: las contraseñas introducidas no son idénticas");
@@ -53,6 +42,7 @@ function acceder(){
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(function(){
         console.log("Acceso: " + email);
+        window.location.href = 'index.html';
     })
     .catch(function(error) {
         var errorCode = error.code;
@@ -60,55 +50,6 @@ function acceder(){
         console.log(errorCode + " - " + errorMessage);
         window.alert("Usuario o contraseña incorrecto");
       });
-}
-
-function observer(){
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          // User is signed in.
-          var displayName = user.displayName;
-          var email = user.email;
-          var emailVerified = user.emailVerified;
-          var photoURL = user.photoURL;
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          var providerData = user.providerData;
-          console.log("Existe usuario activo " + displayName);
-          sesioniniciada();
-          // ...
-        } else {
-          // User is signed out.
-          console.log("No existe usuario activo");
-          // ...
-        }
-      });
-}
-observer();
-
-function sesioniniciada(){
-    console.log("Sesion Iniciada");
-    var contenido = document.getElementById('contenido');
-    contenido.innerHTML = `
-        <h3>Bienvenido!</h3>
-        <button onclick="cerrarsesion()">Cerrar Sesion</button>
-    `;    
-}
-
-function sesioncerrada(){
-    console.log("Sesion Cerrada");
-    var contenido = document.getElementById('contenido');
-    contenido.innerHTML = ``;
-}
-
-function cerrarsesion(){
-    firebase.auth().signOut().
-    then(function(){
-        console.log('Cerrando sesion');
-        sesioncerrada();
-    })
-    .catch(function(error){
-        console.log(error);
-    })
 }
 
 var pantallacrear = true;
@@ -155,8 +96,6 @@ function cambiopantalla(){
     }
 }
 
-
-
 function logging(){
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
     .then(function() {
@@ -173,3 +112,5 @@ function logging(){
         var errorMessage = error.message;
     });
 }
+
+cambiopantalla();
