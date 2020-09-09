@@ -39,7 +39,9 @@ function addFilmBD(){
                 addFilmBD2(image_main_url);
             })
         });
-    }   
+    }else{
+        addFilmBD2("");
+    }
 }
 
 function addFilmBD2(image_main_url){
@@ -170,7 +172,7 @@ function cambiopantalla(pantalla){
         `
         <input id="original_title" placeholder="título"><br><p></p>
         <input type="file" id="fileButton" value="upload"/><br><br>
-        <input type="button" onclick="updatePortada()" id="filmButton" value="Añadir Película"><br>
+        <input type="button" onclick="updatePortada()" id="filmButton" value="Actualizar Portada"><br>
         <progress id="uploader" value="0" max="100">0%</progress><br><br>
         `;
         setupFileReader();

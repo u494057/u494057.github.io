@@ -1,10 +1,10 @@
 var db = firebase.firestore();
 
 var addComentarioButton = document.getElementById('addComentario');
+var inputTxt = document.getElementById('textinput');
 var displayName = "";
 
 function addComment(){
-    var com_id;
     db.collection("comments").add({
         user: firebase.auth().currentUser.displayName,
         comment: document.getElementById("textarea").value,
@@ -14,6 +14,7 @@ function addComment(){
         db.collection("films").doc(sessionStorage.getItem("pelicula_id")).update({
             comments: firebase.firestore.FieldValue.arrayUnion(docRef.id)
         });
+        document.getElementById("textarea").value = "";
     }).catch(function(error){
         console.error("Error adding content: ", error);
     });
@@ -66,11 +67,20 @@ function verificarUsuario(){
     firebase.auth().onAuthStateChanged(function(user) {
         if(user){
             addComentarioButton.disabled = false;
+            inputTxt.disabled = false;
         }else{
             addComentarioButton.disabled = true; 
+            inputTxt.disabled = true;
         }
     })
 }
+
+db.collection("films").where(firebase.firestore.FieldPath.documentId(), '==', sessionStorage.getItem("pelicula_id"))
+    .onSnapshot(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            loadDB();
+        });
+});
 
 function loadComment(id){
     console.log(id);

@@ -1,9 +1,8 @@
 var db = firebase.firestore();
 
+//var resultados = document.getElementById('resultados');
 
-//Lectura de datos de la db
-var resultados = document.getElementById('resultados');
-
+var resultados_activos = new Array();
 
 //Incompleto
 
@@ -16,31 +15,55 @@ function mostrar() {
     y.style.display = "none";
   }
 
-  db.collection("films").get().then(function(querySnapshot) {
+  var option = document.getElementById("opciones");
+
+  var text = document.getElementById("value");
+
+  if(resultados_activos!=null){
+    resultados_activos.forEach(element => element.remove());
+  }
+
+  db.collection("films")
+  .get().then(function(querySnapshot) {
       querySnapshot.forEach((doc) => {
-        resultados = "";
-        var element = document.createElement("div");
-        element.onclick = function() {goTo(doc.id)};
-        element.innerHTML = "";
-        element.innerHTML += `
-        <div class="buscador">
-          <div class="row">
-            <div class="col-lg-4">${doc.data().original_title}</div>
-            <div class="col-lg-2"> ${doc.data().director} </div>  
-            <div class="col-lg-5"> ${doc.data().genres} </div> 
-            <div class="col-lg-1"> Ir a... </div>
+        if(checkOption(option, text, doc)){
+          var element = document.createElement("div");
+          resultados_activos.push(element);
+          element.onclick = function() {goTo(doc.id)};
+          element.innerHTML = "";
+          element.innerHTML += `
+          <div class="buscador">
+            <div class="row">
+              <a class="col-lg-4">${doc.data().original_title}</a>
+              <a class="col-lg-2"> ${doc.data().director} </a>  
+              <a class="col-lg-5"> ${doc.data().genres} </a> 
+              <a href="fichatecnica.html" class="col-lg-1"> Ir a... </a>
+            </div>
           </div>
-        </div>
-        `;
-        document.getElementById("resultados").appendChild(element);
+          `;
+          document.getElementById("resultados").appendChild(element);
+        }
       })
   });
 }
+
+function checkOption(option, text, doc){
+  switch (option.value) {
+    case "Película":
+      return doc.data().original_title.toLowerCase().includes(text.value.toLowerCase());
+    case "Autor":
+      return doc.data().director.toLowerCase().includes(text.value.toLowerCase());
+    case "Productor":
+      return doc.data().producer.toLowerCase().includes(text.value.toLowerCase());
+    case "Fecha":
+      return doc.data().debut.toLowerCase().includes(text.value.toLowerCase());
+    default:
+      return doc.data().original_title.toLowerCase().includes(text.value.toLowerCase());
+  }
+}
+
 function goTo(pel){
-  console.log(pel);
   sessionStorage.setItem("pelicula_id", pel);
-  //console.log(sessionStorage.getItem("pelicula_id"));
-  window.location.href = 'fichatecnica.html';
 }
 
 function observer(){
@@ -58,8 +81,6 @@ function observer(){
       });
 }
 observer();
-load();
-
 
 
 

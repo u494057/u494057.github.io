@@ -61,6 +61,11 @@ Debug de la página comentarios
 .Ahora si cierras sesión se recarga la página actual
 .Otros debugs
 
+--
+Añadido función de búsqueda
+.Búsqueda con diferentes opciones
+.Retoque de algunas erratas
+
 
 
 ++
@@ -68,12 +73,11 @@ Por Hacer
 .A medias
 -Uso de imagenes - galeria
 -Usar una imagen default - sin imagen - para la imagen principal de las peliculas
--Transpasar "peliculas" a "buscar"
 
 
 Dudas y mejoras
 .Para guardar la informacion guardar el nombre en vez del id de la pelicula, e incluso mejor si se pasa el id a traves del link
-.Guardar mas informacion en la sesion, como el nombre de la pelicula activa, para evitar consultas inecesarias
+
 
 
 

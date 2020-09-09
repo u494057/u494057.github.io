@@ -129,25 +129,7 @@ function loadHTML(){
 
     <!-- Our Customers -->
     <h2>Galería</h2>
-    <div class="row">
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="images/ff1.jpg" alt="">
-      </div>
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="images/ff2.jpg" alt="">
-      </div>
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="images/ff3.jpg" alt="">
-      </div>
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="images/ff4.jpg" alt="">
-      </div>
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="images/ff5.jpg" alt="">
-      </div>
-      <div class="col-lg-2 col-sm-4 mb-4">
-        <img class="img-fluid" src="images/ff6.jpg" alt="">
-      </div>
+    <img src="https://firebasestorage.googleapis.com/v0/b/iweb-fcd20.appspot.com/o/unnamed.png?alt=media&token=4f0279fa-8d0f-43d8-98bd-a1cb74a13680"></img>
     </div>
     
     `;

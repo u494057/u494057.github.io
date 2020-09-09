@@ -11,7 +11,7 @@ var image_bot = document.getElementById('image_bot');
 function load() {
   db.collection("films").orderBy("budget", "desc").limit(6).get().then(function(querySnapshot) {
       querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
+        //console.log(doc.id, " => ", doc.data());
         mejor_valoradas = "";
         var element = document.createElement("a");
         element.onclick = function() {setFilm(doc.id)};
@@ -49,9 +49,6 @@ function load() {
   var mounth_cap = yyyy + '-' + String(today.getMonth() + 2).padStart(2, '0') + '-' + dd; 
   var year_cap = (today.getFullYear() + 1) + '-' + mm + '-' + dd;
   today = yyyy + '-' + mm + '-' + dd;
-
-  console.log(mounth_cap);
-  console.log(year_cap);
 
   db.collection("films").where("debut", ">=", today).where("debut", "<=", mounth_cap)
   .limit(6).get().then(function(querySnapshot) {
